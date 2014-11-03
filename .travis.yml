@@ -1,3 +1,7 @@
 language: node_js
 node_js:
   - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-ws-app' ]; then cd .. && eval "mv $currentfolder generator-ws-app" && cd generator-ws-app; fi
+

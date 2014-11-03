@@ -1,0 +1,17 @@
+### IDE
+.idea // you can replace this with your favorite IDE intermediate storage directory name's
+
+### Node template
+# Logs
+logs
+*.log
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+# Sass intermediate storage
+.sass-cache
+
+# Dependency directory
+node_modules
+.tmp
+dist

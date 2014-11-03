@@ -1,16 +1,13 @@
 {
   "name": "generator-ws-app",
-  "version": "0.1.0",
-  "description": "",
+  "version": "0.0.0",
+  "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "sxmcrow/generator-ws-app",
-  "keywords": [
-    "yeoman-generator"
-  ],
   "author": {
     "name": "Romain Lienard",
-    "email": "me@rlienard.fr",
+    "email": "",
     "url": "https://github.com/sxmcrow"
   },
   "engines": {
@@ -19,12 +16,19 @@
   "scripts": {
     "test": "mocha"
   },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
   "dependencies": {
-    "yeoman-generator": "~0.17.7",
-    "path": "~0.4.9",
-    "util": "~0.10.3",
-    "chalk": "~0.5.1",
-    "nodegit": "~0.1.4"
+    "yeoman-generator": "^0.17.0",
+    "chalk": "^0.5.0",
+    "yosay": "^0.3.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
   },
   "peerDependencies": {
     "yo": ">=1.0.0"
