@@ -23,7 +23,8 @@
     "yeoman-generator": "~0.17.7",
     "path": "~0.4.9",
     "util": "~0.10.3",
-    "chalk": "~0.5.1"
+    "chalk": "~0.5.1",
+    "nodegit": "~0.1.4"
   },
   "peerDependencies": {
     "yo": ">=1.0.0"

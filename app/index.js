@@ -7,8 +7,9 @@ var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
+var clone = require('nodegit').Repo.clone;
 
-var OnepageGenerator = yeoman.generators.Base.extend({
+var wsGenerator = yeoman.generators.Base.extend({
   promptUser: function() {
     var done = this.async();
 
@@ -17,21 +18,26 @@ var OnepageGenerator = yeoman.generators.Base.extend({
 
     var prompts = [{
       name: 'appName',
-      message: 'What is your app\'s name ?'
+      message: 'What is the name of your application ?'
     },{
       type: 'confirm',
-      name: 'addDemoSection',
-      message: 'Would you like to generate a demo section ?',
+      name: 'emptyProject',
+      message: 'Would you like an empty project ?    (web-starter-kit with AngularJs without our base files)',
+      default: true
+    },{
+      type: 'confirm',
+      name: 'useSlimFramework',
+      message: 'Would you like to include Server Side with SlimPhp Framework ?    (PHP5 is required)',
       default: true
     }];
 
     this.prompt(prompts, function (props) {
       this.appName = props.appName;
-      this.addDemoSection = props.addDemoSection;
+      this.emptyProject = props.emptyProject;
 
       done();
     }.bind(this));
   }
 });
 
-module.exports = OnepageGenerator;
+module.exports = wsGenerator;
