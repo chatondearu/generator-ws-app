@@ -18,7 +18,7 @@ var WsAppGenerator = yeoman.generators.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the dandy WsApp generator!'
+      'Welcome to WsApp generator!'
     ));
 
     var prompts = [{
