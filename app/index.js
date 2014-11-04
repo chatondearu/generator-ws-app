@@ -1,13 +1,12 @@
 'use strict';
 
-
 var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
+var clone = require('nodegit').Repo.clone;
 
-
-//
+//initialization
 var WsAppGenerator = yeoman.generators.Base.extend({
   initializing: function () {
     this.pkg = require('../package.json');
@@ -35,6 +34,11 @@ var WsAppGenerator = yeoman.generators.Base.extend({
     }.bind(this));
   },
 
+  getWebStarterKitFromGit: function() {
+    var that = this;
+
+  },
+
   writing: {
     app: function () {
       this.dest.mkdir('app');
@@ -48,14 +52,14 @@ var WsAppGenerator = yeoman.generators.Base.extend({
     projectfiles: function () {
       this.dest.mkdir('test');
 
-      this.src.copy('../main/editorconfig', '.editorconfig');
-      this.src.copy('../main/gitattributes', '.gitattributes');
-      this.src.copy('../main/gitignore', '.gitignore');
-      this.src.copy('../main/jshintrc', '.jshintrc');
-      this.src.copy('../main/_bowerrc', '.bowerrc');
-      this.src.copy('../main/_package.json', 'package.json');
-      this.src.copy('../main/_gulpfile.js', 'gulpfile.js');
-      this.src.copy('../main/_bower.json', 'bower.json');
+      this.src.copy('editorconfig', '.editorconfig');
+      this.src.copy('gitattributes', '.gitattributes');
+      this.src.copy('gitignore', '.gitignore');
+      this.src.copy('jshintrc', '.jshintrc');
+      this.src.copy('_bowerrc', '.bowerrc');
+      this.src.copy('_package.json', 'package.json');
+      this.src.copy('_gulpfile.js', 'gulpfile.js');
+      this.src.copy('_bower.json', 'bower.json');
     }
   },
 
