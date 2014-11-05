@@ -1,10 +1,10 @@
-'use strict';
+/* 'app/index.js' */
 
+'use strict';
 var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
-var clone = require('nodegit').Repo.clone;
 
 //initialization
 var WsAppGenerator = yeoman.generators.Base.extend({
